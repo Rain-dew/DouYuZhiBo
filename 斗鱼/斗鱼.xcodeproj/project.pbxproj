@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4695086E1DB7288100171DF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4695086D1DB7288100171DF8 /* AppDelegate.swift */; };
-		469508701DB7288100171DF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4695086F1DB7288100171DF8 /* ViewController.swift */; };
 		469508731DB7288100171DF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469508711DB7288100171DF8 /* Main.storyboard */; };
 		469508751DB7288100171DF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469508741DB7288100171DF8 /* Assets.xcassets */; };
 		469508781DB7288100171DF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469508761DB7288100171DF8 /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		4695086A1DB7288100171DF8 /* 斗鱼.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "斗鱼.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4695086D1DB7288100171DF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4695086F1DB7288100171DF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		469508721DB7288100171DF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		469508741DB7288100171DF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		469508771DB7288100171DF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +52,69 @@
 		4695086C1DB7288100171DF8 /* 斗鱼 */ = {
 			isa = PBXGroup;
 			children = (
+				4695087F1DB7565000171DF8 /* Classes */,
 				4695086D1DB7288100171DF8 /* AppDelegate.swift */,
-				4695086F1DB7288100171DF8 /* ViewController.swift */,
 				469508711DB7288100171DF8 /* Main.storyboard */,
 				469508741DB7288100171DF8 /* Assets.xcassets */,
 				469508761DB7288100171DF8 /* LaunchScreen.storyboard */,
 				469508791DB7288100171DF8 /* Info.plist */,
 			);
 			path = "斗鱼";
+			sourceTree = "<group>";
+		};
+		4695087F1DB7565000171DF8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				469508831DB7565000171DF8 /* Main */,
+				469508811DB7565000171DF8 /* Home */,
+				469508821DB7565000171DF8 /* Live */,
+				469508841DB7565000171DF8 /* Profile */,
+				469508801DB7565000171DF8 /* Follow */,
+				469508851DB7565000171DF8 /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		469508801DB7565000171DF8 /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		469508811DB7565000171DF8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		469508821DB7565000171DF8 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		469508831DB7565000171DF8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		469508841DB7565000171DF8 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		469508851DB7565000171DF8 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +190,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				469508701DB7288100171DF8 /* ViewController.swift in Sources */,
 				4695086E1DB7288100171DF8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
