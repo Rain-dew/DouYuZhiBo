@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionNormalCell" customModule="斗鱼" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="277" height="180"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="277" height="180"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="kHW-B1-xrp"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raindew" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYb-QF-9wD">
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_live_cate_normal" translatesAutoresizingMaskIntoConstraints="NO" id="Mpn-aw-K9e">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="0ap-4y-nvX"/>
+                            <constraint firstAttribute="width" constant="14" id="ZLc-f6-Unm"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="一段测试的文字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXa-6g-ez8">
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dI-nQ-8ZO">
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="666在线" image="Image_online"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ZYb-QF-9wD" firstAttribute="leading" secondItem="Mpn-aw-K9e" secondAttribute="trailing" constant="5" id="76L-xE-oMR"/>
+                <constraint firstAttribute="bottom" secondItem="ZYb-QF-9wD" secondAttribute="bottom" constant="10" id="8Bl-HZ-iwK"/>
+                <constraint firstItem="Mpn-aw-K9e" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="8Rd-C5-SiD"/>
+                <constraint firstItem="kHW-B1-xrp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9mK-mX-igQ"/>
+                <constraint firstItem="kHW-B1-xrp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="AC8-gR-t7T"/>
+                <constraint firstAttribute="trailing" secondItem="ZYb-QF-9wD" secondAttribute="trailing" constant="5" id="Fyp-oX-VrV"/>
+                <constraint firstItem="3dI-nQ-8ZO" firstAttribute="bottom" secondItem="kHW-B1-xrp" secondAttribute="bottom" constant="-5" id="QJ9-Qh-vw3"/>
+                <constraint firstItem="ZYb-QF-9wD" firstAttribute="centerY" secondItem="Mpn-aw-K9e" secondAttribute="centerY" id="YwE-tA-W5L"/>
+                <constraint firstItem="3dI-nQ-8ZO" firstAttribute="trailing" secondItem="kHW-B1-xrp" secondAttribute="trailing" constant="-5" id="iN8-N9-c2k"/>
+                <constraint firstItem="Mpn-aw-K9e" firstAttribute="top" secondItem="kHW-B1-xrp" secondAttribute="bottom" constant="5" id="keb-qd-6Ej"/>
+                <constraint firstItem="xXa-6g-ez8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="lSp-gV-b7f"/>
+                <constraint firstAttribute="bottom" secondItem="Mpn-aw-K9e" secondAttribute="bottom" constant="10" id="oPj-uz-n01"/>
+                <constraint firstAttribute="trailing" secondItem="kHW-B1-xrp" secondAttribute="trailing" id="t8v-Kz-kpp"/>
+                <constraint firstItem="xXa-6g-ez8" firstAttribute="bottom" secondItem="kHW-B1-xrp" secondAttribute="bottom" constant="-5" id="ywb-sb-hks"/>
+            </constraints>
+            <size key="customSize" width="277" height="180"/>
+            <connections>
+                <outlet property="imageView" destination="kHW-B1-xrp" id="sUl-4r-8SA"/>
+            </connections>
+            <point key="canvasLocation" x="-15" y="80"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Image_online" width="16" height="16"/>
+        <image name="Img_default" width="172" height="103"/>
+        <image name="home_live_cate_normal" width="14" height="14"/>
+    </resources>
+</document>

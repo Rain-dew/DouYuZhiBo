@@ -1,0 +1,12 @@
+# Uncomment this line to define a global platform for your project
+# Comment this line if you're not using Swift and don't want to use dynamic frameworks
+platform :ios, '10.0'
+
+target '斗鱼' do
+  use_frameworks!
+
+pod 'Alamofire', '~> 4.0.1'
+
+  # Pods for 斗鱼
+
+end
