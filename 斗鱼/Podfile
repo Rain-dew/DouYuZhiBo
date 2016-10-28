@@ -6,7 +6,7 @@ target '斗鱼' do
   use_frameworks!
 
 pod 'Alamofire', '~> 4.0.1'
-
+pod 'Kingfisher'
   # Pods for 斗鱼
 
 end

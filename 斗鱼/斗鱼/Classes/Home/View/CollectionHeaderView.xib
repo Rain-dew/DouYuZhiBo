@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="CollectionHeaderView" customModule="斗鱼" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
@@ -50,7 +50,11 @@
                 <constraint firstItem="Gbk-mk-dFJ" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="fsO-jr-ucN"/>
                 <constraint firstAttribute="trailing" secondItem="mjj-4u-Oy2" secondAttribute="trailing" constant="5" id="zgk-yL-Kuk"/>
             </constraints>
-            <point key="canvasLocation" x="-144" y="75"/>
+            <connections>
+                <outlet property="iconImageView" destination="WWI-oR-ELO" id="mwM-rE-ZTi"/>
+                <outlet property="titleName" destination="3gX-8z-ZAP" id="4fG-Pc-A0u"/>
+            </connections>
+            <point key="canvasLocation" x="124" y="231"/>
         </collectionReusableView>
     </objects>
     <resources>

@@ -28,6 +28,8 @@ class AnchorModel: NSObject {
     //在线人数
     var online : Int = 0
 
+    //城市
+    var anchor_city : String = ""
 
     init(dict : [String : Any]) {
         super.init()

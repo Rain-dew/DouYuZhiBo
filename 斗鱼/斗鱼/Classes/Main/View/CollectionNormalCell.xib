@@ -16,11 +16,6 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="kHW-B1-xrp"/>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raindew" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYb-QF-9wD">
-                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_live_cate_normal" translatesAutoresizingMaskIntoConstraints="NO" id="Mpn-aw-K9e">
                         <constraints>
                             <constraint firstAttribute="height" constant="14" id="0ap-4y-nvX"/>
@@ -36,6 +31,11 @@
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <state key="normal" title="666在线" image="Image_online"/>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raindew" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYb-QF-9wD">
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <constraints>
@@ -56,9 +56,13 @@
             </constraints>
             <size key="customSize" width="277" height="180"/>
             <connections>
+                <outlet property="iconImageView" destination="Mpn-aw-K9e" id="4WA-lh-4db"/>
                 <outlet property="imageView" destination="kHW-B1-xrp" id="sUl-4r-8SA"/>
+                <outlet property="nickNameLabel" destination="xXa-6g-ez8" id="s3m-W7-BZc"/>
+                <outlet property="onlineBtn" destination="3dI-nQ-8ZO" id="FQu-tt-VET"/>
+                <outlet property="roomNameLabel" destination="ZYb-QF-9wD" id="Dx1-6I-kHx"/>
             </connections>
-            <point key="canvasLocation" x="-15" y="80"/>
+            <point key="canvasLocation" x="-151" y="82"/>
         </collectionViewCell>
     </objects>
     <resources>

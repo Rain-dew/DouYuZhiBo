@@ -9,10 +9,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionPrettyCell" customModule="斗鱼" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="122" height="155"/>
+            <rect key="frame" x="0.0" y="0.0" width="131" height="153"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="122" height="155"/>
+                <rect key="frame" x="0.0" y="0.0" width="131" height="153"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7m-xs-Zzb">
@@ -57,12 +57,14 @@
                 <constraint firstItem="dvC-yC-sWT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="qFd-8L-bc7"/>
                 <constraint firstItem="hBv-nQ-TRX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="spC-w0-fWV"/>
             </constraints>
-            <size key="customSize" width="122" height="155"/>
+            <size key="customSize" width="131" height="153"/>
             <connections>
+                <outlet property="cityLabel" destination="r7m-xs-Zzb" id="kop-jS-TQP"/>
                 <outlet property="imageView" destination="dvC-yC-sWT" id="rip-zr-J9e"/>
+                <outlet property="nickNameLabel" destination="hBv-nQ-TRX" id="YyV-73-C90"/>
                 <outlet property="onLineLabel" destination="iCW-8j-cQz" id="A2a-RV-GT9"/>
             </connections>
-            <point key="canvasLocation" x="-107" y="103"/>
+            <point key="canvasLocation" x="10" y="70"/>
         </collectionViewCell>
     </objects>
     <resources>
