@@ -14,13 +14,14 @@ private let kItemW : CGFloat = (kScreenW - 3 * kItemMargin) / 2
 private let kItemH : CGFloat = kItemW * 3 / 4
 private let kItemPrettyH : CGFloat = kItemW * 4 / 3
 private let kHeaderViewH : CGFloat = 50
+private let kCycleViewH = kScreenW * 3 / 8
 private let kNormalCellID = "NormalCellID"
 private let kPrettyCellID = "PrettyCellID "
 private let kHeaderViewID = "HeaderViewID"
 class RecommendUIViewController: UIViewController {
 
 
-
+//    let cycleView = RecommendCycleView.recommendCycleView()
 //MARK: -- 懒加载
     fileprivate lazy var recommendViewModel : RecommendViewModel = {
 
@@ -55,6 +56,12 @@ class RecommendUIViewController: UIViewController {
     }()
 
 
+    //懒加载banner
+    fileprivate lazy var cycleView : RecommendCycleView = {
+        let cycleView = RecommendCycleView.recommendCycleView()
+        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        return cycleView
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         //设置UI
@@ -70,10 +77,16 @@ extension RecommendUIViewController {
 
     fileprivate func loadData(){
 
+        //请求推荐数据
         recommendViewModel.requestData {
 
             self.collectionView.reloadData()
 
+        }
+        //请求无线轮播
+        recommendViewModel.requestCycleData {
+
+            self.cycleView.cycleModels = self.recommendViewModel.cycleModels
         }
 
     }
@@ -86,6 +99,13 @@ extension RecommendUIViewController {
     fileprivate func setupUI() {
 
         view.addSubview(collectionView)
+
+        //把banner加入到collectionView中
+        collectionView.addSubview(cycleView)
+
+        //设置collectionView内边距
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
+
     }
 
 

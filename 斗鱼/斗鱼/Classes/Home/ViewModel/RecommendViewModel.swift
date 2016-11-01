@@ -13,9 +13,9 @@ class RecommendViewModel: NSObject {
     //MARK: -- 懒加载
     lazy var anchorGroups : [AnchorGroup] = [AnchorGroup
     ]()//总数据
+    lazy var cycleModels : [CycleModel] = [CycleModel]()
     fileprivate lazy var bigDataGroup : AnchorGroup = AnchorGroup()
     fileprivate lazy var prettyGroup : AnchorGroup = AnchorGroup()
-
 }
 
 extension RecommendViewModel {
@@ -103,4 +103,27 @@ extension RecommendViewModel {
             finishCallBack()
         }
     }
+
+    // 请求无线轮播的数据
+    func requestCycleData(_ finishCallback : @escaping () -> ()) {
+
+         NetWorkTool.requestData(type: .get, URLString: "http://www.douyutv.com/api/v1/slide/6", parameters: ["version" : "2.300"]) { (result) in
+
+            //把所有数据转成字典
+            guard let resultDict = result as? [String : Any] else { return }
+
+            //根据key拿到需要的value
+            guard let dataArray = resultDict["data"] as? [[String : Any]] else { return }
+
+            //字典转模型
+            for dict in dataArray {
+
+                self.cycleModels.append(CycleModel(dict: dict))
+            }
+
+            finishCallback()
+
+        }
+    }
+
 }
