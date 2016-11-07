@@ -37,7 +37,8 @@ class CollectionNormalCell: UICollectionViewCell {
 
             //昵称赋值
             nickNameLabel.text = anchor.nickname
-            //
+            //房间
+            roomNameLabel.text = anchor.room_name
             //设置封面
             guard let iconURL = URL(string: anchor.vertical_src)else { return }
             imageView.kf.setImage(with: iconURL)

@@ -30,7 +30,7 @@
                     </connections>
                 </collectionView>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="GwS-cD-Sxd">
-                    <rect key="frame" x="326" y="106" width="39" height="37"/>
+                    <rect key="frame" x="326" y="109" width="39" height="37"/>
                     <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="currentPageIndicatorTintColor" red="0.85286458330000003" green="0.3526378557" blue="0.2015662147" alpha="1" colorSpace="calibratedRGB"/>
                 </pageControl>
@@ -38,7 +38,7 @@
             <constraints>
                 <constraint firstItem="NJ0-aW-CQ4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0MX-3x-ozg"/>
                 <constraint firstItem="NJ0-aW-CQ4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2fn-bh-6HU"/>
-                <constraint firstAttribute="bottom" secondItem="GwS-cD-Sxd" secondAttribute="bottom" id="6AC-Zl-Gir"/>
+                <constraint firstAttribute="bottom" secondItem="GwS-cD-Sxd" secondAttribute="bottom" constant="-3" id="6AC-Zl-Gir"/>
                 <constraint firstAttribute="trailing" secondItem="NJ0-aW-CQ4" secondAttribute="trailing" id="LCU-eD-yyV"/>
                 <constraint firstAttribute="trailing" secondItem="GwS-cD-Sxd" secondAttribute="trailing" constant="10" id="eaK-5H-yCm"/>
                 <constraint firstAttribute="bottom" secondItem="NJ0-aW-CQ4" secondAttribute="bottom" id="eg5-Vi-Lib"/>

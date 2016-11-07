@@ -15,6 +15,7 @@ private let kItemH : CGFloat = kItemW * 3 / 4
 private let kItemPrettyH : CGFloat = kItemW * 4 / 3
 private let kHeaderViewH : CGFloat = 50
 private let kCycleViewH = kScreenW * 3 / 8
+private let kGameViewH : CGFloat = 90
 private let kNormalCellID = "NormalCellID"
 private let kPrettyCellID = "PrettyCellID "
 private let kHeaderViewID = "HeaderViewID"
@@ -59,8 +60,14 @@ class RecommendUIViewController: UIViewController {
     //懒加载banner
     fileprivate lazy var cycleView : RecommendCycleView = {
         let cycleView = RecommendCycleView.recommendCycleView()
-        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        cycleView.frame = CGRect(x: 0, y: -(kCycleViewH + kGameViewH), width: kScreenW, height: kCycleViewH)
         return cycleView
+    }()
+    //gameView
+    fileprivate lazy var gameView : RecommendGameView = {
+        let gameView = RecommendGameView.recommendGameView()
+        gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
+        return gameView
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,11 +84,12 @@ extension RecommendUIViewController {
 
     fileprivate func loadData(){
 
-        //请求推荐数据
+
         recommendViewModel.requestData {
-
+            //请求推荐数据
             self.collectionView.reloadData()
-
+            //将数据传送给GameView
+            self.gameView.groups = self.recommendViewModel.anchorGroups
         }
         //请求无线轮播
         recommendViewModel.requestCycleData {
@@ -102,9 +110,10 @@ extension RecommendUIViewController {
 
         //把banner加入到collectionView中
         collectionView.addSubview(cycleView)
-
+        //把gameView加到collectionView中
+        collectionView.addSubview(gameView)
         //设置collectionView内边距
-        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH + kGameViewH, left: 0, bottom: 0, right: 0)
 
     }
 
