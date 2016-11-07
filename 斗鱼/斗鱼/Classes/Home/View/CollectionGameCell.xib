@@ -6,13 +6,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionGameCell" customModule="斗鱼" customModuleProvider="target">
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionGameCell" customModule="斗鱼" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -29,18 +28,28 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jLZ-KB-SwA">
-                        <rect key="frame" x="16" y="15" width="48" height="48"/>
+                        <rect key="frame" x="16" y="13" width="48" height="48"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="jLZ-KB-SwA" secondAttribute="height" multiplier="1:1" id="ipi-bo-9Ka"/>
+                            <constraint firstAttribute="width" constant="48" id="VHA-hd-Wz0"/>
+                            <constraint firstAttribute="height" constant="48" id="VU8-Dh-64X"/>
                         </constraints>
                     </imageView>
+                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="82U-QE-3Zx">
+                        <rect key="frame" x="0.0" y="90" width="80" height="1"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="dLh-Y2-yot"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="wSV-JF-8fX" firstAttribute="top" secondItem="jLZ-KB-SwA" secondAttribute="bottom" constant="5" id="8O5-o0-ZKl"/>
+                <constraint firstItem="jLZ-KB-SwA" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-8" id="2AI-I5-dpZ"/>
+                <constraint firstAttribute="trailing" secondItem="82U-QE-3Zx" secondAttribute="trailing" id="3kw-Gv-dGz"/>
                 <constraint firstItem="wSV-JF-8fX" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="QcL-EH-poq"/>
-                <constraint firstItem="jLZ-KB-SwA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="cQG-RG-epF"/>
-                <constraint firstItem="jLZ-KB-SwA" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="tOc-oK-Ekr"/>
+                <constraint firstAttribute="bottom" secondItem="82U-QE-3Zx" secondAttribute="bottom" constant="-1" id="e9z-Fk-mvV"/>
+                <constraint firstItem="jLZ-KB-SwA" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="lso-2X-RaI"/>
+                <constraint firstItem="82U-QE-3Zx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="sAC-nV-6cE"/>
                 <constraint firstAttribute="bottom" secondItem="wSV-JF-8fX" secondAttribute="bottom" constant="10" id="v9z-tp-Gzb"/>
             </constraints>
             <size key="customSize" width="144" height="113"/>
@@ -48,7 +57,7 @@
                 <outlet property="iconImageView" destination="jLZ-KB-SwA" id="PxB-ve-uHv"/>
                 <outlet property="titleLabel" destination="wSV-JF-8fX" id="9ip-Bk-XZN"/>
             </connections>
-            <point key="canvasLocation" x="-103" y="59"/>
+            <point key="canvasLocation" x="-275" y="46"/>
         </collectionViewCell>
     </objects>
 </document>

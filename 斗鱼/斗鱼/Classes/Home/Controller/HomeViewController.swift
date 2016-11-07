@@ -32,8 +32,10 @@ class HomeViewController: UIViewController {
         var childVcs = [UIViewController]()
         //加入一个初始化的推荐控制器
         childVcs.append(RecommendUIViewController())
+        childVcs.append(GameViewController())
+        childVcs.append(AmuserViewController())
 
-        for _ in 0..<3 {
+        for _ in 0..<1 {
 
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))

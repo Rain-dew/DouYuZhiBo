@@ -11,6 +11,7 @@ import UIKit
 class CollectionHeaderView: UICollectionReusableView {
     @IBOutlet var titleName: UILabel!
 
+    @IBOutlet var moreBtn: UIButton!
     @IBOutlet var iconImageView: UIImageView!
     var group : AnchorGroup? {
 
@@ -26,4 +27,12 @@ class CollectionHeaderView: UICollectionReusableView {
 
     }
     
+}
+extension CollectionHeaderView {
+
+    class func collectionHeaderView() -> CollectionHeaderView {
+
+        return Bundle.main.loadNibNamed("CollectionHeaderView", owner: nil, options: nil)?.first as! CollectionHeaderView
+
+    }
 }

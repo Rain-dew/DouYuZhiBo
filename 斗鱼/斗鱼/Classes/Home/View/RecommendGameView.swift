@@ -11,17 +11,9 @@ private let kGameCell = "kGameCell"
 class RecommendGameView: UIView {
 
     //MARK: -- 定义数据属性
-    var groups : [AnchorGroup]? {
+    var groups : [BaseGameModel]? {
 
         didSet {
-            //前两组数据（颜值，热门）不需要
-            groups?.removeFirst()
-            groups?.removeFirst()
-
-            //添加一个更多
-            let moreGroup = AnchorGroup()
-            moreGroup.tag_name = "更多"
-            groups?.append(moreGroup)
 
             collectionView.reloadData()
         }
@@ -59,7 +51,7 @@ extension RecommendGameView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCell, for: indexPath) as! CollectionGameCell
         cell.backgroundColor = .clear
-        cell.group = groups![indexPath.item]
+        cell.baseGame = groups![indexPath.item]
         return cell
     }
 

@@ -8,11 +8,10 @@
 
 import UIKit
 
-class RecommendViewModel: NSObject {
+class RecommendViewModel: BaseViewModel {
 
     //MARK: -- 懒加载
-    lazy var anchorGroups : [AnchorGroup] = [AnchorGroup
-    ]()//总数据
+
     lazy var cycleModels : [CycleModel] = [CycleModel]()
     fileprivate lazy var bigDataGroup : AnchorGroup = AnchorGroup()
     fileprivate lazy var prettyGroup : AnchorGroup = AnchorGroup()
@@ -68,30 +67,13 @@ extension RecommendViewModel {
             dGroup.leave()
         }
         
-//MARK: -- 后面部分的游戏数据
+//MARK: -- 后面部分的游戏数据(抽取到父类)
+
         dGroup.enter()
+        loadAnchorData(URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) {
 
-        NetWorkTool.requestData(type: .get, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) { (result) in
-            //讲result:转成字典类型
-            guard let resultDict = result as? [String : NSObject] else { return }
-            //根据data中的key获取数组
-            guard let dataArray = resultDict["data"] as? [[String : NSObject]] else { return }
-            //遍历数组。获取字典。并且把字典转成模型对象
-            for dict in dataArray {
-                let group = AnchorGroup(dict: dict)
-                self.anchorGroups.append(group)
-
-            }
-
-//            for group in self.anchorGroups {
-//
-//                for anchor in group.anchors {
-//
-////                    print(anchor.nickname)
-//                }
-////                print("----打印主播----")
-//            }
             dGroup.leave()
+
         }
 
         //所有的请求到这里进行一个排序

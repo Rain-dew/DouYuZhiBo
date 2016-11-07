@@ -46,7 +46,6 @@ class CollectionNormalCell: UICollectionViewCell {
     }
 
 
-
     override func awakeFromNib() {
         super.awakeFromNib()
 
