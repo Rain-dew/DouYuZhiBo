@@ -73,6 +73,7 @@ extension BaseAnchorViewController {
 extension BaseAnchorViewController : UICollectionViewDataSource, UICollectionViewDelegate {
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
+
         return baseVM.anchorGroups.count
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -82,6 +83,7 @@ extension BaseAnchorViewController : UICollectionViewDataSource, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! CollectionNormalCell
+
         cell.anchor = baseVM.anchorGroups[indexPath.section].anchors[indexPath.item]
 
         return cell
@@ -92,6 +94,7 @@ extension BaseAnchorViewController : UICollectionViewDataSource, UICollectionVie
 
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! CollectionHeaderView
         //取出模型
+  
         headerView.group = baseVM.anchorGroups[indexPath.section]
         return headerView
     }
